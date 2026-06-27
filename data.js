@@ -6,7 +6,8 @@ const GODS = [
     domain: "Oorsprong van alles",
     description: "De leegte waaruit de wereld ontstond.",
     parents: [],
-    level: 0
+    level: 0,
+    order: 1
 },
 
 {
@@ -16,7 +17,8 @@ const GODS = [
     domain: "Aarde",
     description: "De personificatie van de aarde.",
     parents: ["chaos"],
-    level: 1
+    level: 1,
+    order: 1
 },
 {
     id: "uranus",
@@ -25,7 +27,19 @@ const GODS = [
     domain: "Hemel",
     description: "De hemelgod en partner van Gaia.",
     parents: ["gaia"],
-    level: 1
+    level: 1,
+    order: 2
+},
+
+{
+    id: "pontus",
+    name: "Pontus",
+    title: "Oergod",
+    domain: "Zee",
+    description: "De oergod van de zee, geboren uit Gaia zonder vader.",
+    parents: ["gaia"],
+    level: 1,
+    order: 3
 },
 
 {
@@ -35,7 +49,8 @@ const GODS = [
     domain: "Nacht",
     description: "De oergodin van de nacht. Zelfs Zeus had ontzag voor haar.",
     parents: ["chaos"],
-    level: 1
+    level: 1,
+    order: 4
 },
 
 {
@@ -45,7 +60,8 @@ const GODS = [
     domain: "Duisternis",
     description: "De personificatie van de diepe duisternis.",
     parents: ["chaos"],
-    level: 1
+    level: 1,
+    order: 5
 },
 
 {
@@ -55,7 +71,8 @@ const GODS = [
     domain: "Slaap",
     description: "God van de slaap. Hij kon zowel mensen als goden in slaap brengen.",
     parents: ["nyx","erebus"],
-    level: 2
+    level: 2,
+    order: 7
 },
 
 {
@@ -65,7 +82,8 @@ const GODS = [
     domain: "Vreedzame dood",
     description: "De personificatie van de vreedzame dood en tweelingbroer van Hypnos.",
     parents: ["nyx","erebus"],
-    level: 2
+    level: 2,
+    order: 8
 },
 
 {
@@ -75,7 +93,8 @@ const GODS = [
     domain: "Tijd",
     description: "Leider van de Titanen.",
     parents: ["gaia","uranus"],
-    level: 2
+    level: 2,
+    order: 1
 },
 
 {
@@ -85,7 +104,75 @@ const GODS = [
     domain: "Moederschap",
     description: "Moeder van de Olympische goden.",
     parents: ["gaia","uranus"],
-    level: 2
+    level: 2,
+    order: 2
+},
+{
+    id: "crius",
+    name: "Crius",
+    title: "Titaan",
+    domain: "Hemelse constellaties",
+    description: "Een van de twaalf oorspronkelijke Titanen. Vader van Perses, Pallas en Astraeus.",
+    parents: ["gaia", "uranus"],
+    level: 2,
+    order: 3
+},
+
+{
+    id: "eurybia",
+    name: "Eurybia",
+    title: "Godin",
+    domain: "Zee",
+    description: "Dochter van Gaia en Pontus. Godin van de kracht van de zee.",
+    parents: ["gaia", "pontus"],
+    level: 2,
+    order: 4
+},
+
+{
+    id: "coeus",
+    name: "Coeus",
+    title: "Titaan",
+    domain: "Intelligentie en de hemel",
+    description: "Een van de oorspronkelijke Titanen en vader van Asteria en Leto.",
+    parents: ["gaia", "uranus"],
+    level: 2,
+    order: 6
+},
+
+{
+    id: "phoebe",
+    name: "Phoebe",
+    title: "Titanide",
+    domain: "Profetie",
+    description: "Titanide van het intellect en de profetie. Grootmoeder van Apollo en Artemis.",
+    parents: ["gaia", "uranus"],
+    level: 2,
+    order: 5
+},
+
+{
+    id: "perses",
+    name: "Perses",
+    title: "Titaan",
+    domain: "Vernietiging",
+    description: "Een Titaan die vooral bekendstaat als de vader van Hecate.",
+    parents: ["crius","eurybia"],
+    //parents: [],
+    level: 3,
+    order: 1
+},
+
+{
+    id: "asteria",
+    name: "Asteria",
+    title: "Titanide",
+    domain: "Sterren en nachtelijke voorspellingen",
+    description: "Godin van de sterrenhemel en nachtelijke orakels.",
+    parents: ["coeus","phoebe"],
+    //parents: [],
+    level: 3,
+    order: 2
 },
 
 {
@@ -95,7 +182,8 @@ const GODS = [
     domain: "Lucht en bliksem",
     description: "Koning van de goden.",
     parents: ["cronus","rhea"],
-    level: 3
+    level: 4,
+    order: 1
 },
 
 {
@@ -105,7 +193,8 @@ const GODS = [
     domain: "Zee",
     description: "Heerser van de zeeën.",
     parents: ["cronus","rhea"],
-    level: 3
+    level: 4,
+    order: 2
 },
 
 {
@@ -115,7 +204,8 @@ const GODS = [
     domain: "Onderwereld",
     description: "Heerser van de onderwereld.",
     parents: ["cronus","rhea"],
-    level: 3
+    level: 4,
+    order: 3
 },
 
 {
@@ -125,17 +215,19 @@ const GODS = [
     domain: "Huwelijk",
     description: "Koningin van de goden.",
     parents: ["cronus","rhea"],
-    level: 3
+    level: 4,
+    order: 5
 },
 
 {
     id: "demeter",
-    name: "Olympische godin",
+    name: "Demeter",
     title: "Olympische godin",
     domain: "Landbouw",
     description: "Godin van de oogst.",
     parents: ["cronus","rhea"],
-    level: 3
+    level: 4,
+    order: 4
 },
 
 {
@@ -145,7 +237,19 @@ const GODS = [
     domain: "Haard",
     description: "Godin van huis en haard.",
     parents: ["cronus","rhea"],
-    level: 3
+    level: 4,
+    order: 6
+},
+
+{
+    id: "hecate",
+    name: "Hecate",
+    title: "Titanide",
+    domain: "Magie, hekserij, kruispunten",
+    description: "Godin van magie, de nacht, geesten en kruispunten. Ze hielp Demeter bij de zoektocht naar Persephone en bleef ook na de Titanenoorlog een gerespecteerde godin.",
+    parents: ["perses","asteria"],
+    level: 4,
+    order: 8
 },
 
 {
@@ -155,7 +259,8 @@ const GODS = [
     domain: "Wijsheid",
     description: "Geboren uit het hoofd van Zeus.",
     parents: ["zeus"],
-    level: 4
+    level: 5,
+    order: 1
 },
 
 {
@@ -165,7 +270,8 @@ const GODS = [
     domain: "Zon, muziek",
     description: "Tweelingbroer van Artemis.",
     parents: ["zeus"],
-    level: 4
+    level: 5,
+    order: 2
 },
 
 {
@@ -175,7 +281,8 @@ const GODS = [
     domain: "Jacht",
     description: "Godin van de jacht.",
     parents: ["zeus"],
-    level: 3
+    level: 5,
+    order: 3
 },
 
 {
@@ -185,7 +292,8 @@ const GODS = [
     domain: "Oorlog",
     description: "God van oorlog.",
     parents: ["zeus","hera"],
-    level: 4
+    level: 5,
+    order: 7
 },
 
 {
@@ -195,7 +303,8 @@ const GODS = [
     domain: "Smeden",
     description: "God van vuur en smeden.",
     parents: ["hera"],
-    level: 4
+    level: 5,
+    order: 8
 },
 
 {
@@ -205,7 +314,8 @@ const GODS = [
     domain: "Boodschapper",
     description: "Boodschapper van de goden.",
     parents: ["zeus"],
-    level: 4
+    level: 5,
+    order: 5
 },
 
 {
@@ -215,7 +325,8 @@ const GODS = [
     domain: "Wijn",
     description: "God van wijn en feesten.",
     parents: ["zeus"],
-    level: 4
+    level: 5,
+    order: 4
 },
 
 {
@@ -225,7 +336,8 @@ const GODS = [
     domain: "Lente en onderwereld",
     description: "Dochter van Demeter.",
     parents: ["zeus","demeter"],
-    level: 4
+    level: 5,
+    order: 6
 },
 
 ];

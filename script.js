@@ -134,9 +134,14 @@ function computePositions()
     {
         const gods = levels[level];
 
-        gods.sort((a, b) =>
-        getGod(a).name.localeCompare(getGod(b).name)
-        );
+        gods.sort((a, b) => {
+
+            const ga = getGod(a);
+            const gb = getGod(b);
+
+            return (ga.order ?? 9999) - (gb.order ?? 9999);
+
+        });
 
         const totalWidth =
         gods.length * NODE_WIDTH +
