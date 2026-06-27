@@ -28,7 +28,6 @@ let offsetX = 500;
 let offsetY = 250;
 
 const positions = {};
-const generationMap = {};
 
 
 // ======================================================
@@ -52,6 +51,8 @@ const lineLayer = viewport.querySelector("#connections");
 // ======================================================
 // Bereken generatie (laag)
 // ======================================================
+/*const generationMap = {};
+
 
 function generation(id)
 {
@@ -96,8 +97,19 @@ for(const god of GODS)
         levels[g] = [];
 
     levels[g].push(god.id);
-}
+}*/
 
+const levels = {};
+
+for (const god of GODS)
+{
+    const level = god.level ?? 0;
+
+    if (!levels[level])
+        levels[level] = [];
+
+    levels[level].push(god.id);
+}
 
 // Sorteer alfabetisch
 for(const level in levels)
@@ -114,27 +126,33 @@ for(const level in levels)
 
 function computePositions()
 {
-    for(const level in levels)
+    const sortedLevels = Object.keys(levels)
+    .map(Number)
+    .sort((a, b) => a - b);
+
+    for (const level of sortedLevels)
     {
         const gods = levels[level];
 
+        gods.sort((a, b) =>
+        getGod(a).name.localeCompare(getGod(b).name)
+        );
+
         const totalWidth =
         gods.length * NODE_WIDTH +
-        (gods.length-1) * HORIZONTAL_SPACING;
+        (gods.length - 1) * HORIZONTAL_SPACING;
 
-        let x = -totalWidth/2;
+        let x = -totalWidth / 2;
 
         const y =
         level *
         (NODE_HEIGHT + VERTICAL_SPACING);
 
-        for(const id of gods)
+        for (const id of gods)
         {
             positions[id] = {
-
                 x,
                 y
-
             };
 
             x += NODE_WIDTH + HORIZONTAL_SPACING;
