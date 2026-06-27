@@ -11,6 +11,17 @@ const GODS = [
 },
 
 {
+    id: "tartarus",
+    name: "Tartaros",
+    title: "Oergod",
+    domain: "Diepste onderwereld",
+    description: "Oergod en personificatie van de diepste afgrond van de onderwereld, waar de Titanen werden opgesloten na hun nederlaag.",
+    parents: ["chaos"],
+    level: 1,
+    order: -1
+},
+
+{
     id: "gaia",
     name: "Gaia",
     title: "Oergodin",
@@ -20,6 +31,7 @@ const GODS = [
     level: 1,
     order: 1
 },
+
 {
     id: "uranus",
     name: "Uranus",
@@ -65,6 +77,39 @@ const GODS = [
 },
 
 {
+    id: "aether",
+    name: "Aether",
+    title: "Oergod",
+    domain: "Bovenlucht en licht",
+    description: "De personificatie van de heldere bovenlucht die de goden inademden, in tegenstelling tot de gewone lucht van de stervelingen.",
+    parents: ["nyx", "erebus"],
+    level: 1,
+    order: 6
+},
+
+{
+    id: "hemera",
+    name: "Hemera",
+    title: "Oergodin",
+    domain: "Daglicht",
+    description: "Godin en personificatie van de dag. Elke ochtend verliet zij de onderwereld terwijl haar moeder Nyx terugkeerde.",
+    parents: ["nyx", "erebus"],
+    level: 1,
+    order: 7
+},
+
+{
+    id: "nemesis",
+    name: "Nemesis",
+    title: "Godin",
+    domain: "Wraak en gerechtigheid",
+    description: "Godin die hoogmoed en overmoed bestrafte.",
+    parents: ["nyx"],
+    level: 2,
+    order: 7
+},
+
+{
     id: "hypnos",
     name: "Hypnos",
     title: "God",
@@ -72,7 +117,7 @@ const GODS = [
     description: "God van de slaap. Hij kon zowel mensen als goden in slaap brengen.",
     parents: ["nyx","erebus"],
     level: 2,
-    order: 7
+    order: 8
 },
 
 {
@@ -83,7 +128,7 @@ const GODS = [
     description: "De personificatie van de vreedzame dood en tweelingbroer van Hypnos.",
     parents: ["nyx","erebus"],
     level: 2,
-    order: 8
+    order: 9
 },
 
 {
@@ -253,6 +298,17 @@ const GODS = [
 },
 
 {
+    id: "leto",
+    name: "Leto",
+    title: "Godin",
+    domain: "Moederschap, bescherer van jonge kinderen",
+    description: "Godin van het moederschap en de beschermer van jonge kinderen. Ze kreeg met Zeus de tweeling Apollo en Artemis. Volgens de mythe werd ze door Hera achtervolgd tijdens haar zwangerschap, totdat ze op het eiland Delos haar kinderen kon baren.",
+    parents: ["coeus", "phoebe"],
+    level: 4,
+    order: 9
+},
+
+{
     id: "athena",
     name: "Athena",
     title: "Olympische godin",
@@ -264,12 +320,23 @@ const GODS = [
 },
 
 {
+    id: "aphrodite",
+    name: "Aphrodite",
+    title: "Olympische godin",
+    domain: "Liefde, schoonheid en begeerte",
+    description: "Godin van de liefde, schoonheid en begeerte. Volgens Hesiodus ontstond ze uit het zeeschuim nadat de geslachtsdelen van Uranus in zee waren geworpen. Ze is de echtgenote van Hephaestus en de moeder van onder andere Eros.",
+    parents: ["uranus"],
+    level: 4,
+    order: 10
+},
+
+{
     id: "apollo",
     name: "Apollo",
     title: "Olympische god",
     domain: "Zon, muziek",
     description: "Tweelingbroer van Artemis.",
-    parents: ["zeus"],
+    parents: ["zeus", "leto"],
     level: 5,
     order: 2
 },
@@ -280,7 +347,7 @@ const GODS = [
     title: "Olympische godin",
     domain: "Jacht",
     description: "Godin van de jacht.",
-    parents: ["zeus"],
+    parents: ["zeus", "leto"],
     level: 5,
     order: 3
 },
@@ -338,6 +405,50 @@ const GODS = [
     parents: ["zeus","demeter"],
     level: 5,
     order: 6
+},
+
+{
+    id: "pan",
+    name: "Pan",
+    title: "God",
+    domain: "Natuur, herders en bossen",
+    description: "God van de natuur, herders, bossen en wilde dieren. Hij wordt afgebeeld met de poten en horens van een geit en staat bekend om zijn panfluit.",
+    parents: ["hermes"],
+    level: 6,
+    order: 2
+},
+
+{
+    id: "hebe",
+    name: "Hebe",
+    title: "Godin",
+    domain: "Jeugd",
+    description: "Godin van de jeugd. Ze schonk de nectar en ambrozijn aan de Olympische goden en trouwde later met Herakles nadat hij een god was geworden.",
+    parents: ["zeus", "hera"],
+    level: 5,
+    order: 7
+},
+
+{
+    id: "eros",
+    name: "Eros",
+    title: "God",
+    domain: "Liefde en verlangen",
+    description: "God van de liefde, hartstocht en verlangen. Hij schiet met zijn magische pijlen zodat goden en mensen verliefd worden.",
+    parents: ["aphrodite", "ares"],
+    level: 6,
+    order: 10
+},
+
+{
+    id: "asclepius",
+    name: "Asclepius",
+    title: "God",
+    domain: "Geneeskunde",
+    description: "God van de geneeskunde en genezing. Hij was de zoon van Apollo en de sterfelijke Coronis.",
+    parents: ["apollo"],
+    level: 6,
+    order: 1
 },
 
 ];

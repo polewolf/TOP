@@ -227,6 +227,19 @@ footer {
     font-size: 14px;
 }
 
+footer a {
+    color: #999;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #888;
+    text-decoration: underline;
+}
+#github{
+    height: 20px;
+    margin-right: 10px;
+}
 /* ==========================
  *  Scrollbar
  = *========================= */
