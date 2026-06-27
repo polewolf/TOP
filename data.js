@@ -65,6 +65,17 @@ const GODS = [
 },
 
 {
+    id: "nemesis",
+    name: "Nemesis",
+    title: "Godin",
+    domain: "Wraak en gerechtigheid",
+    description: "Godin die hoogmoed en overmoed bestrafte.",
+    parents: ["nyx"],
+    level: 2,
+    order: 7
+},
+
+{
     id: "hypnos",
     name: "Hypnos",
     title: "God",
@@ -72,7 +83,7 @@ const GODS = [
     description: "God van de slaap. Hij kon zowel mensen als goden in slaap brengen.",
     parents: ["nyx","erebus"],
     level: 2,
-    order: 7
+    order: 8
 },
 
 {
@@ -83,7 +94,7 @@ const GODS = [
     description: "De personificatie van de vreedzame dood en tweelingbroer van Hypnos.",
     parents: ["nyx","erebus"],
     level: 2,
-    order: 8
+    order: 9
 },
 
 {
