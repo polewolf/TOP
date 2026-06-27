@@ -143,9 +143,9 @@ const GODS = [
 {
     id: "phoebe",
     name: "Phoebe",
-    title: "Titanide",
+    title: "Titaan (vrouwelijk)",
     domain: "Profetie",
-    description: "Titanide van het intellect en de profetie. Grootmoeder van Apollo en Artemis.",
+    description: "Titaan van het intellect en de profetie. Grootmoeder van Apollo en Artemis.",
     parents: ["gaia", "uranus"],
     level: 2,
     order: 5
@@ -166,7 +166,7 @@ const GODS = [
 {
     id: "asteria",
     name: "Asteria",
-    title: "Titanide",
+    title: "Titaan (vrouwelijk)",
     domain: "Sterren en nachtelijke voorspellingen",
     description: "Godin van de sterrenhemel en nachtelijke orakels.",
     parents: ["coeus","phoebe"],
