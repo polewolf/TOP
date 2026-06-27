@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griekse Goden Stamboom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Griekse Goden Stamboom</h1>
+
+    <div class="toolbar">
+        <input
+            type="text"
+            id="search"
+            placeholder="Zoek een god..."
+            autocomplete="off"
+        >
+
+        <button id="resetView">
+            Reset beeld
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <div id="canvas">
+
+        <svg id="tree" xmlns="http://www.w3.org/2000/svg">
+
+            <g id="connections"></g>
+
+            <g id="nodes"></g>
+
+        </svg>
+
+    </div>
+
+    <aside id="info">
+
+        <h2>Selecteer een god</h2>
+
+        <p>
+            Klik op een god in de stamboom om informatie te bekijken.
+        </p>
+
+        <table>
+
+            <tr>
+                <th>Naam</th>
+                <td id="info-name">-</td>
+            </tr>
+
+            <tr>
+                <th>Titel</th>
+                <td id="info-title">-</td>
+            </tr>
+
+            <tr>
+                <th>Domein</th>
+                <td id="info-domain">-</td>
+            </tr>
+
+            <tr>
+                <th>Ouders</th>
+                <td id="info-parents">-</td>
+            </tr>
+
+            <tr>
+                <th>Kinderen</th>
+                <td id="info-children">-</td>
+            </tr>
+
+        </table>
+
+        <h3>Beschrijving</h3>
+
+        <p id="info-description">
+            Geen god geselecteerd.
+        </p>
+
+    </aside>
+
+</main>
+
+<footer>
+    Interactieve Griekse godenstamboom
+</footer>
+
+</body>
+</html>

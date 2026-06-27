@@ -1,0 +1,264 @@
+/* ==========================
+ *  Algemene instellingen
+ = *========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1b1b1b;
+    color: white;
+    overflow: hidden;
+}
+
+/* ==========================
+ *  Header
+ = *========================= */
+
+header {
+    height: 70px;
+    background: #252525;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: 1px solid #444;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+/* ==========================
+ *  Toolbar
+ = *========================= */
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+}
+
+.toolbar input {
+    width: 220px;
+    padding: 10px;
+    font-size: 15px;
+
+    background: #333;
+    color: white;
+
+    border: 1px solid #555;
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.toolbar input:focus {
+    border-color: #4d8cff;
+}
+
+.toolbar button {
+    cursor: pointer;
+
+    padding: 10px 16px;
+
+    background: #2f6fd4;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.toolbar button:hover {
+    background: #4d8cff;
+}
+
+/* ==========================
+ *  Hoofdscherm
+ = *========================= */
+
+main {
+    display: flex;
+    height: calc(100vh - 110px);
+}
+
+/* ==========================
+ *  SVG gebied
+ = *========================= */
+
+#canvas {
+flex: 1;
+overflow: hidden;
+position: relative;
+background:
+linear-gradient(#262626 1px, transparent 1px),
+linear-gradient(90deg, #262626 1px, transparent 1px);
+background-size: 40px 40px;
+}
+
+#tree {
+width: 100%;
+height: 100%;
+cursor: grab;
+}
+
+#tree.dragging {
+cursor: grabbing;
+}
+
+/* ==========================
+ *  Informatiepaneel
+ = *========================= */
+
+#info {
+width: 330px;
+background: #252525;
+border-left: 1px solid #444;
+overflow-y: auto;
+padding: 20px;
+}
+
+#info h2 {
+margin-bottom: 15px;
+}
+
+#info h3 {
+margin-top: 25px;
+margin-bottom: 10px;
+}
+
+#info p {
+line-height: 1.6;
+}
+
+#info table {
+width: 100%;
+border-collapse: collapse;
+}
+
+#info th {
+text-align: left;
+width: 100px;
+color: #bbbbbb;
+padding: 8px 0;
+vertical-align: top;
+}
+
+#info td {
+padding: 8px 0;
+}
+
+/* ==========================
+ *  SVG lijnen
+ = *========================= */
+
+.connection {
+    stroke: #777;
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.connection.highlight {
+    stroke: #ffd54d;
+    stroke-width: 4;
+}
+
+/* ==========================
+ *  SVG knopen
+ = *========================= */
+
+.node rect {
+    fill: #36639a;
+    stroke: #6ca8ff;
+    stroke-width: 2;
+
+    rx: 12;
+    ry: 12;
+
+    transition:
+    fill .2s,
+    stroke .2s,
+    transform .2s;
+}
+
+.node text {
+    fill: white;
+    font-size: 15px;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.node:hover rect {
+    fill: #4b7ec2;
+}
+
+.node.selected rect {
+    fill: #d69a29;
+    stroke: #ffd76b;
+}
+
+.node.search-result rect {
+    stroke: #00ff88;
+    stroke-width: 4;
+}
+
+/* ==========================
+ *  Footer
+ = *========================= */
+
+footer {
+    height: 40px;
+    background: #252525;
+
+    border-top: 1px solid #444;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #999;
+    font-size: 14px;
+}
+
+/* ==========================
+ *  Scrollbar
+ = *========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+}
+
+/* ==========================
+ *  Responsive
+ = *========================= */
+
+@media (max-width: 1000px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    #info {
+    width: 100%;
+    height: 260px;
+    border-left: none;
+    border-top: 1px solid #444;
+    }
+
+}
