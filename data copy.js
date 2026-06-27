@@ -1,12 +1,21 @@
 const GODS = [
-    {
-        id: "chaos",
-        name: "Chaos",
-        title: "Oergod",
-        domain: "Oorsprong van alles",
-        description: "De leegte waaruit de wereld ontstond.",
-        parents: []
-    },
+{
+    id: "chaos",
+    name: "Chaos",
+    title: "Oergod",
+    domain: "Oorsprong van alles",
+    description: "De leegte waaruit de wereld ontstond.",
+    parents: []
+},
+
+{
+    id: "nyx",
+    name: "Nyx",
+    title: "Oergodin",
+    domain: "Nacht",
+    description: "De personificatie van de nacht.",
+    parents: ["chaos"]
+},
 
 {
     id: "gaia",
@@ -42,6 +51,24 @@ const GODS = [
     domain: "Moederschap",
     description: "Moeder van de Olympische goden.",
     parents: ["gaia","uranus"]
+},
+
+{
+    id: "perses",
+    name: "Perses",
+    title: "Titaan",
+    domain: "Vernietiging",
+    description: "Een Titaan die vooral bekendstaat als de vader van Hecate.",
+    parents: ["crius","eurybia"]
+},
+
+{
+    id: "asteria",
+    name: "Asteria",
+    title: "Titaan(Vrouwelijk)",
+    domain: "Sterren en nachtelijke voorspellingen",
+    description: "Godin van de sterrenhemel en nachtelijke orakels.",
+    parents: ["coeus","phoebe"]
 },
 
 {
@@ -82,7 +109,7 @@ const GODS = [
 
 {
     id: "demeter",
-    name: "Olympische godin",
+    name: "Demeter",
     title: "Olympische godin",
     domain: "Landbouw",
     description: "Godin van de oogst.",
@@ -166,16 +193,11 @@ const GODS = [
     name: "Persephone",
     title: "Godin",
     domain: "Lente en onderwereld",
-    description: "Dochter van Demeter.",
+    description: "Dochter van Demeter. Gestolen door Hades.",
     parents: ["zeus","demeter"]
 }
 ];
 
-
-
-/* -------------------------------------------------
- *  Indexen maken
- - *------------------------------------------------ */
 
 const godsById = {};
 const childrenMap = {};
@@ -198,12 +220,6 @@ for (const god of GODS) {
     }
 
 }
-
-
-
-/* -------------------------------------------------
- *  Hulpfuncties
- - *------------------------------------------------ */
 
 function getGod(id) {
     return godsById[id];
