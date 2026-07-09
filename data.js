@@ -77,6 +77,7 @@ const GODS = [
 },
 
 {
+<<<<<<< HEAD
     id: "aether",
     name: "Aether",
     title: "Oergod",
@@ -99,6 +100,8 @@ const GODS = [
 },
 
 {
+=======
+>>>>>>> branch 'main' of https://github.com/polewolf/TOP.git
     id: "nemesis",
     name: "Nemesis",
     title: "Godin",
